@@ -1,3 +1,9 @@
+import sys
+from pathlib import Path
+
+# Добавляем текущую директорию (папку app) в sys.path
+sys.path.append(str(Path(__file__).parent))
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from routers import transactions, loans
